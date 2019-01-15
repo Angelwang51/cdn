@@ -8,13 +8,9 @@
         "major-build:default": "webpack --config theme_default.config.js",
         "minor-build:default": "webpack --config theme_default.config.js --env.minor",
         "patch-build:default": "webpack --config theme_default.config.js --env.patch",
-        "start:default": "webpack-dev-server --open --config theme_default.config.js",
-        "watch:default": "webpack --watch --config theme_default.config.js",
         "major-build:1": "webpack --config theme_1.config.js --env.major",
         "minor-build:1": "webpack --config theme_1.config.js --env.minor",
-        "patch-build:1": "webpack --config theme_1.config.js --env.patch",
-        "start:1": "webpack-dev-server --open --config theme_1.config.js",
-        "watch:1": "webpack --watch --config theme_1.config.js"
+        "patch-build:1": "webpack --config theme_1.config.js --env.patch"
        
     },
     "keywords": [],

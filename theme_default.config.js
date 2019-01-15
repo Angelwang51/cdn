@@ -24,16 +24,7 @@ module.exports = {
     //Clean dist before each build
     new CleanWebpackPlugin(['dist']),
 
-    //Generate a HTML file 
-    new HtmlWebpackPlugin({
-      myOptions: {
-        title: 'theme_default',
-        logo_src: 'img/logo.png'
-      },
-      template: './templates/base.html',
-      inject: true
-    }),
-
+  
     //Move all the required *.css modules in entry chunks into a separate CSS file    
     new ExtractTextPlugin({
       filename: '[name].css'
@@ -78,20 +69,6 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
-      },
-
-      //Load HTML with nunjucks-isomorphic-loader
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'nunjucks-isomorphic-loader',
-            query: {
-              root: [path.resolve(__dirname, './templates')]
-
-            }
-          }
-        ]
       }
 
     ]

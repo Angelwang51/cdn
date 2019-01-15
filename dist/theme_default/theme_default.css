@@ -1,0 +1,349 @@
+/** [AIV_SHORT]  Build version: 4.1.0 - Tuesday, January 15th, 2019, 5:46:03 PM  **/ 
+ body {
+  font-family: 'Open Sans', serif;
+  padding-top: 54px;
+  color: #868e96; }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40; }
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem; }
+
+h2 {
+  font-size: 3.5rem; }
+
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', serif;
+  font-size: 1.35rem; }
+
+.list-social-icons a {
+  color: #495057; }
+  .list-social-icons a:hover {
+    color: #BD5D38; }
+  .list-social-icons a .fa-lg {
+    font-size: 1.75rem; }
+
+.list-icons {
+  font-size: 3rem; }
+  .list-icons .list-inline-item i:hover {
+    color: #BD5D38; }
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 600;
+  text-transform: uppercase; }
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh; }
+    #sideNav .navbar-brand {
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem; }
+      #sideNav .navbar-brand .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid rgba(255, 255, 255, 0.2); }
+    #sideNav .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+      width: 100%;
+      margin-bottom: auto; }
+      #sideNav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%; }
+        #sideNav .navbar-collapse .navbar-nav .nav-item {
+          display: block; }
+          #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+            display: block; } }
+
+section.resume-section {
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  section.resume-section .resume-item .resume-date {
+    min-width: none; }
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh; }
+    section.resume-section .resume-item .resume-date {
+      min-width: 18rem; } }
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem; } }
+
+.bg-primary {
+  background-color: #BD5D38 !important; }
+
+.text-primary {
+  color: #BD5D38 !important; }
+
+.btn:click {
+  background-color: #BD5D38; }
+
+.btn-primary {
+  background-color: #BD5D38;
+  border-color: #BD5D38; }
+
+.btn-outline-primary {
+  color: #BD5D38;
+  border-color: #824027; }
+
+.btn-primary:hover {
+  background-color: #824027;
+  border-color: #824027; }
+
+.btn-outline-primary:hover {
+  background-color: #824027;
+  border-color: #824027; }
+
+a {
+  color: #BD5D38; }
+  a:hover, a:focus, a:active {
+    color: #824027; }
+
+.creditcard svg#cardfront, .creditcard svg#cardback {
+  width: 100%;
+  box-shadow: 1px 5px 6px 0 #909090;
+  border-radius: 22px; }
+
+.creditcard .front, .creditcard .back {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  backface-visibility: hidden;
+  color: #47525d; }
+
+.card-component {
+  padding-top: 130px; }
+
+.payment-title {
+  width: 100%; }
+
+.form-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 90px 90px 90px;
+  grid-template-areas: "name name" "number number" "expiration security";
+  max-width: 400px;
+  padding: 20px;
+  color: #0f0f0f; }
+  .form-container .field-container:first-of-type {
+    grid-area: name; }
+  .form-container .field-container:nth-of-type(2) {
+    grid-area: number; }
+  .form-container .field-container:nth-of-type(3) {
+    grid-area: expiration; }
+  .form-container .field-container:nth-of-type(4) {
+    grid-area: security; }
+
+.field-container {
+  position: relative; }
+  .field-container input {
+    box-sizing: border-box; }
+
+label {
+  padding-bottom: 5px;
+  font-size: 13px; }
+
+input {
+  margin-top: 3px;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc; }
+
+.ccicon {
+  height: 38px;
+  position: absolute;
+  right: 6px;
+  top: calc(50% + 3px);
+  width: 60px; }
+
+.card-container {
+  width: 100%;
+  max-width: 400px;
+  max-height: 251px;
+  height: 54vw;
+  padding: 40px 20px 20px 20px;
+  perspective: 1000px; }
+
+#ccsingle {
+  position: absolute;
+  right: 15px;
+  top: 20px; }
+  #ccsingle svg {
+    width: 100px;
+    max-height: 60px; }
+
+.creditcard {
+  width: 100%;
+  max-width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer; }
+  .creditcard .lightcolor {
+    transition: fill .5s; }
+  .creditcard .darkcolor {
+    transition: fill .5s; }
+  .creditcard .lightblue {
+    fill: #03a9f4; }
+  .creditcard .lightbluedark {
+    fill: #0288d1; }
+  .creditcard .red {
+    fill: #ef5350; }
+  .creditcard .reddark {
+    fill: #d32f2f; }
+  .creditcard .purple {
+    fill: #ab47bc; }
+  .creditcard .purpledark {
+    fill: #7b1fa2; }
+  .creditcard .cyan {
+    fill: #26c6da; }
+  .creditcard .cyandark {
+    fill: #0097a7; }
+  .creditcard .green {
+    fill: #66bb6a; }
+  .creditcard .greendark {
+    fill: #388e3c; }
+  .creditcard .lime {
+    fill: #d4e157; }
+  .creditcard .limedark {
+    fill: #afb42b; }
+  .creditcard .yellow {
+    fill: #ffeb3b; }
+  .creditcard .yellowdark {
+    fill: #f9a825; }
+  .creditcard .orange {
+    fill: #ff9800; }
+  .creditcard .orangedark {
+    fill: #ef6c00; }
+  .creditcard .grey {
+    fill: #bdbdbd; }
+  .creditcard .greydark {
+    fill: #616161; }
+  .creditcard .back {
+    transform: rotateY(180deg); }
+  .creditcard.flipped {
+    transform: rotateY(180deg); }
+
+#generatecard {
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 4px;
+  background-color: #909090;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right; }
+
+#svgname {
+  text-transform: uppercase; }
+
+#cardfront .st2 {
+  fill: #fff; }
+
+#cardfront .st3 {
+  font-family: Source Code Pro, monospace;
+  font-weight: 600; }
+
+#cardfront .st4 {
+  font-size: 54.7817px; }
+
+#cardfront .st5 {
+  font-family: Source Code Pro, monospace;
+  font-weight: 400; }
+
+#cardfront .st6 {
+  font-size: 33.1112px; }
+
+#cardfront .st7 {
+  opacity: 0.6;
+  fill: #fff; }
+
+#cardfront .st8 {
+  font-size: 24px; }
+
+#cardfront .st9 {
+  font-size: 36.5498px; }
+
+#cardfront .st10 {
+  font-family: Source Code Pro, monospace;
+  font-weight: 300; }
+
+#cardfront .st11 {
+  font-size: 16.1716px; }
+
+#cardfront .st12 {
+  fill: #4c4c4c; }
+
+#cardback .st0 {
+  fill: none;
+  stroke: #0f0f0f;
+  stroke-miterlimit: 10; }
+
+#cardback .st2 {
+  fill: #0f0f0f; }
+
+#cardback .st3 {
+  fill: #f2f2f2; }
+
+#cardback .st4 {
+  fill: #d8d2db; }
+
+#cardback .st5 {
+  fill: #c4c4c4; }
+
+#cardback .st6 {
+  font-family: Source Code Pro, monospace;
+  font-weight: 400; }
+
+#cardback .st7 {
+  font-size: 27px; }
+
+#cardback .st8 {
+  opacity: 0.6; }
+
+#cardback .st9 {
+  fill: #fff; }
+
+#cardback .st10 {
+  font-size: 24px; }
+
+#cardback .st11 {
+  fill: #eaeaea; }
+
+#cardback .st12 {
+  font-family: Rock Salt, cursive; }
+
+#cardback .st13 {
+  font-size: 37.769px; }
+ 
