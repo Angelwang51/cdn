@@ -1,0 +1,34 @@
+@import "../../theme_default/sass/abstracts/variables.scss";
+.bg-primary {
+    background-color: $blue !important;
+  }
+  .text-primary {
+    color: $blue !important;
+  }
+  .btn:click{
+    background-color: $blue;
+  }
+  .btn-primary {
+    background-color: $blue;
+    border-color:$blue;
+  }
+  .btn-outline-primary{
+    color:$blue;
+    border-color:darken($blue, 15%);
+  }
+  .btn-primary:hover {
+    background-color: darken($blue, 15%);
+    border-color:darken($blue, 15%);
+  }
+  .btn-outline-primary:hover{
+    background-color: darken($blue, 15%);
+    border-color:darken($blue, 15%);
+  }
+  a {
+    color: $blue;
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($blue, 15%);
+    }
+  }

@@ -1,0 +1,12 @@
+@import "../../theme_default/sass/components/card.scss";
+#generatecard {
+    background-color: $color_lochmara_approx;
+}
+.creditcard {
+    .grey {
+        fill: $color_cerulean_approx;
+    }
+    .greydark {
+        fill: $color_lochmara_approx;
+    }
+}

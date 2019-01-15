@@ -1,0 +1,327 @@
+//colors
+$color_alabaster_approx: #f9f9f9;
+$color_dove_gray_approx: #707070;
+$color_alto_approx: #dcdcdc;
+$black:  black;
+$white: #fff;
+$color_mountain_mist_approx: #909090;
+$color_cerulean_approx: #03a9f4;
+$color_lochmara_approx: #0288d1;
+$color_carnation_approx: #ef5350;
+$color_persian_red_approx: #d32f2f;
+$color_fuchsia_pink_approx: #ab47bc;
+$color_seance_approx: #7b1fa2;
+$color_scooter_approx: #26c6da;
+$color_bondi_blue_approx: #0097a7;
+$color_fern_approx: #66bb6a;
+$color_goblin_approx: #388e3c;
+$color_wattle_approx: #d4e157;
+$color_citron_approx: #afb42b;
+$color_golden_fizz_approx: #ffeb3b;
+$color_sea_buckthorn_approx: #f9a825;
+$color_california_approx: #ff9800;
+$color_clementine_approx: #ef6c00;
+$color_silver_approx: #bdbdbd;
+$color_storm_dust_approx: #616161;
+$color_gravel_approx: #4c4c4c;
+$color_woodsmoke_approx: #0f0f0f;
+$concrete: #f2f2f2;
+$color_iron_approx: #d8d2db;
+$color_cloud_approx: #c4c4c4;
+$color_gray_nurse_approx: #eaeaea;
+$color_trout_approx: #47525d;
+
+//fonts
+$font_0: Raleway;
+$font_1: Source Code Pro;
+$font_2: monospace;
+$font_3: Rock Salt;
+$font_4: cursive;
+
+//@extend-elements
+//original selectors
+//.creditcard svg#cardfront, .creditcard svg#cardback
+%extend_1 {
+	width: 100%;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 5px 6px 0 $color_mountain_mist_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 22px;
+}
+
+//original selectors
+//.creditcard .front, .creditcard .back
+%extend_2 {
+	position: absolute;
+	width: 100%;
+	max-width: 400px;
+	//Instead of the line below you could use @include backface-visibility($visibility)
+	backface-visibility: hidden;
+	color: $color_trout_approx;
+}
+.card-component {
+    padding-top:130px;
+}
+
+.payment-title {
+	width: 100%;
+	
+}
+.form-container {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: auto auto;
+	grid-template-rows: 90px 90px 90px;
+	grid-template-areas: "name name""number number""expiration security";
+	max-width: 400px;
+	padding: 20px;
+	color: $color_woodsmoke_approx;
+	.field-container {
+		&:first-of-type {
+			grid-area: name;
+		}
+		&:nth-of-type(2) {
+			grid-area: number;
+		}
+		&:nth-of-type(3) {
+			grid-area: expiration;
+		}
+		&:nth-of-type(4) {
+			grid-area: security;
+		}
+	}
+}
+.field-container {
+	position: relative;
+	input {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+}
+label {
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+input {
+	margin-top: 3px;
+	padding: 15px;
+	font-size: 16px;
+	width: 100%;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	border: 1px solid $color_alto_approx;
+}
+.ccicon {
+	height: 38px;
+	position: absolute;
+	right: 6px;
+	top: calc(50% + 3px);
+	width: 60px;
+}
+.card-container {
+	width: 100%;
+	max-width: 400px;
+	max-height: 251px;
+	height: 54vw;
+	padding: 40px 20px 20px 20px;
+	//Instead of the line below you could use @include perspective($p)
+	perspective: 1000px;
+}
+#ccsingle {
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	svg {
+		width: 100px;
+		max-height: 60px;
+	}
+}
+.creditcard {
+	width: 100%;
+	max-width: 400px;
+	//Instead of the line below you could use @include transform-style($style)
+	transform-style: preserve-3d;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: transform 0.6s;
+	cursor: pointer;
+	svg {
+		&#cardfront {
+			@extend %extend_1;
+		}
+		&#cardback {
+			@extend %extend_1;
+		}
+	}
+	.lightcolor {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: fill .5s;
+	}
+	.darkcolor {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: fill .5s;
+	}
+	.lightblue {
+		fill: $color_cerulean_approx;
+	}
+	.lightbluedark {
+		fill: $color_lochmara_approx;
+	}
+	.red {
+		fill: $color_carnation_approx;
+	}
+	.reddark {
+		fill: $color_persian_red_approx;
+	}
+	.purple {
+		fill: $color_fuchsia_pink_approx;
+	}
+	.purpledark {
+		fill: $color_seance_approx;
+	}
+	.cyan {
+		fill: $color_scooter_approx;
+	}
+	.cyandark {
+		fill: $color_bondi_blue_approx;
+	}
+	.green {
+		fill: $color_fern_approx;
+	}
+	.greendark {
+		fill: $color_goblin_approx;
+	}
+	.lime {
+		fill: $color_wattle_approx;
+	}
+	.limedark {
+		fill: $color_citron_approx;
+	}
+	.yellow {
+		fill: $color_golden_fizz_approx;
+	}
+	.yellowdark {
+		fill: $color_sea_buckthorn_approx;
+	}
+	.orange {
+		fill: $color_california_approx;
+	}
+	.orangedark {
+		fill: $color_clementine_approx;
+	}
+	.grey {
+		fill: $color_silver_approx;
+	}
+	.greydark {
+		fill: $color_storm_dust_approx;
+	}
+	.front {
+		@extend %extend_2;
+	}
+	.back {
+		@extend %extend_2;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotateY(180deg);
+	}
+	&.flipped {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotateY(180deg);
+	}
+}
+#generatecard {
+	font-size: 12px;
+	color: $white;
+	padding: 2px 4px;
+	background-color: $color_mountain_mist_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+#svgname {
+	text-transform: uppercase;
+}
+#cardfront {
+	.st2 {
+		fill: $white;
+	}
+	.st3 {
+		font-family: $font_1, $font_2;
+		font-weight: 600;
+	}
+	.st4 {
+		font-size: 54.7817px;
+	}
+	.st5 {
+		font-family: $font_1, $font_2;
+		font-weight: 400;
+	}
+	.st6 {
+		font-size: 33.1112px;
+	}
+	.st7 {
+		opacity: 0.6;
+		fill: $white;
+	}
+	.st8 {
+		font-size: 24px;
+	}
+	.st9 {
+		font-size: 36.5498px;
+	}
+	.st10 {
+		font-family: $font_1, $font_2;
+		font-weight: 300;
+	}
+	.st11 {
+		font-size: 16.1716px;
+	}
+	.st12 {
+		fill: $color_gravel_approx;
+	}
+}
+#cardback {
+	.st0 {
+		fill: none;
+		stroke: $color_woodsmoke_approx;
+		stroke-miterlimit: 10;
+	}
+	.st2 {
+		fill: $color_woodsmoke_approx;
+	}
+	.st3 {
+		fill: $concrete;
+	}
+	.st4 {
+		fill: $color_iron_approx;
+	}
+	.st5 {
+		fill: $color_cloud_approx;
+	}
+	.st6 {
+		font-family: $font_1, $font_2;
+		font-weight: 400;
+	}
+	.st7 {
+		font-size: 27px;
+	}
+	.st8 {
+		opacity: 0.6;
+	}
+	.st9 {
+		fill: $white;
+	}
+	.st10 {
+		font-size: 24px;
+	}
+	.st11 {
+		fill: $color_gray_nurse_approx;
+	}
+	.st12 {
+		font-family: $font_3, $font_4;
+	}
+	.st13 {
+		font-size: 37.769px;
+	}
+}
+.preload * {
+}
